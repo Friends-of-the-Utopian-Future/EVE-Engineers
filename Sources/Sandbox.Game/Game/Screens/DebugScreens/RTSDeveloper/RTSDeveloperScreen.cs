@@ -1,6 +1,5 @@
 ﻿#region
 
-using System;
 using System.Text;
 using Sandbox.Game.Gui;
 using Sandbox.Graphics.GUI;
@@ -55,21 +54,6 @@ namespace Sandbox.Game.Screens.DebugScreens.RTSDeveloper
       {
         CloseScreen();
       }
-    }
-  }
-
-  internal class RTSDeveloperScreenView
-  {
-    public MyGuiControlLabel DevScreenCaption { get; set; }
-    public MyGuiControlButton ATestButton { get; set; }
-  }
-
-  internal static class RTSDeveloperController
-  {
-    public static void UpdateCaption(MyGuiControlButton myGuiControlButton, RTSDeveloperScreenView screenView)
-    {
-      screenView.DevScreenCaption.Text = DateTime.Now.ToLongDateString();
-      screenView.DevScreenCaption.Update();
     }
   }
 }

@@ -19,6 +19,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Xml.Serialization;
+using Sandbox.Game.Debugging;
 using VRage;
 using VRage;
 using VRage.Audio;
@@ -688,6 +689,11 @@ namespace Sandbox.Game.Gui
 
             if (MyReloadTestComponent.Enabled && State == MyGuiScreenState.OPENED)
                 MyReloadTestComponent.DoReload();
+
+            if (State == MyGuiScreenState.OPENED)
+            {
+                MainMenuSkipHelper.SkipMenuIfStartupParamIsTrue();
+            }
 
             return true;
         }

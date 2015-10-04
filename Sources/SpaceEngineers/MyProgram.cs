@@ -26,6 +26,7 @@ using VRage.FileSystem;
 using Sandbox;
 using SpaceEngineers.Game;
 using System.Runtime.CompilerServices;
+using Sandbox.Common.GlobalConfigurations;
 using Sandbox.DependencyInjection;
 
 #endregion
@@ -89,6 +90,8 @@ namespace SpaceEngineers
             {
                 InitSplashScreen();
             }
+
+            StartupParametersLogic.Configure(args);
 
             // This won't crash with BadFormatExpection when 64-bit game started as 32-bit process, it will show message
             // Will uncomment when it's possible to test it

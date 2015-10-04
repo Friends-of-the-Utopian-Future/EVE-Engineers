@@ -364,6 +364,7 @@
     <Compile Include="Game\AI\Pathfinding\MyVoxelPathfinding.cs" />
     <Compile Include="Game\AI\Pathfinding\MyNavmeshComponents.cs" />
     <Compile Include="Game\Audio\MyAudioExtensions.cs" />
+    <Compile Include="Game\Debugging\MainMenuSkipHelper.cs" />
     <Compile Include="Game\Entities\Character\Components\MyCharacterComponentTypes.cs" />
     <Compile Include="Game\Entities\Character\Components\MyCharacterInventorySpawnComponent.cs" />
     <Compile Include="Game\Entities\Character\MyCharacter.MoveToComponents.cs" />
@@ -596,8 +597,10 @@
     <Compile Include="Game\Multiplayer\MySyncGunBase.cs" />
     <Compile Include="Game\Screens\DebugScreens\MyGuiScreenDebugPlanets.cs" />
     <Compile Include="Game\Screens\DebugScreens\RTSDeveloper\MyDevelopGroup.cs" />
+    <Compile Include="Game\Screens\DebugScreens\RTSDeveloper\RTSDeveloperController.cs" />
     <Compile Include="Game\Screens\DebugScreens\RTSDeveloper\RTSDeveloperScreen.cs" />
     <Compile Include="Game\Screens\DebugScreens\RTSDeveloper\RTSDeveloperScreenAttribute.cs" />
+    <Compile Include="Game\Screens\DebugScreens\RTSDeveloper\RTSDeveloperScreenView.cs" />
     <Compile Include="Game\Screens\Helpers\MyBattleLoadListResult.cs" />
     <Compile Include="Game\Screens\Helpers\MyGuiControlStats.cs" />
     <Compile Include="Game\Screens\MyGuiScreenAdvancedScenarioSettings.cs" />
