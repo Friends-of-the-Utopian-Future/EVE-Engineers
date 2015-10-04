@@ -6,7 +6,7 @@ using VRageMath;
 
 namespace Sandbox.Graphics.GUI
 {
-    interface IMyGuiSandbox
+  public interface IMyGuiSandbox
     {
         void AddScreen(global::Sandbox.Graphics.GUI.MyGuiScreenBase screen);
         void BackToIntroLogos(Action afterLogosAction);

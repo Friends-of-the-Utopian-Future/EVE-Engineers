@@ -17,6 +17,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
+using Sandbox.Game.Screens.DebugScreens.RTSDeveloper;
+using SpaceEngineers.GameConversion.GUI.Screens.Developer;
 using VRage;
 using VRage;
 using VRage.Audio;
@@ -51,7 +53,7 @@ namespace Sandbox.Graphics.GUI
 
         public bool IsDebugScreenEnabled() { return m_debugScreensEnabled; }
 
-        internal List<MyDebugComponent> UserDebugInputComponents = new List<MyDebugComponent>();
+      public List<MyDebugComponent> UserDebugInputComponents = new List<MyDebugComponent>();
 
 
         public class MyScreenShot
@@ -470,11 +472,11 @@ namespace Sandbox.Graphics.GUI
 
         private void ShowDeveloperDebugScreen()
         {
-            if (!(m_currentDebugScreen is MyGuiScreenDebugOfficial) && !(m_currentDebugScreen is MyGuiScreenDebugDeveloper))
+            if (!(m_currentDebugScreen is MyGuiScreenDebugOfficial) && !(m_currentDebugScreen is RTSDeveloperScreen))
             {
                 if (m_currentDebugScreen != null)
                     RemoveScreen(m_currentDebugScreen);
-                var devScreen = new MyGuiScreenDebugDeveloper();
+                var devScreen = new RTSDeveloperScreen();
 
                 AddScreen(m_currentDebugScreen = devScreen);
                 m_currentDebugScreen.Closed += (screen) => m_currentDebugScreen = null;

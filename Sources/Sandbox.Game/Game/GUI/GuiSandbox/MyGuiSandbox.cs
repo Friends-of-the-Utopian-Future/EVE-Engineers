@@ -20,7 +20,7 @@ namespace Sandbox.Graphics.GUI
 {
     public static class MyGuiSandbox
     {
-        internal static IMyGuiSandbox Gui = new MyNullGui();
+      public static IMyGuiSandbox Gui = new MyNullGui();
 
         private static Dictionary<Type, Type> m_createdScreenTypes = new Dictionary<Type, Type>();
 

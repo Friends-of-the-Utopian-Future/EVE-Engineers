@@ -26,6 +26,7 @@ using VRage.FileSystem;
 using Sandbox;
 using SpaceEngineers.Game;
 using System.Runtime.CompilerServices;
+using Sandbox.DependencyInjection;
 
 #endregion
 
@@ -48,6 +49,8 @@ namespace SpaceEngineers
         //  Main method
         static void Main(string[] args)
         {
+            NinjectBootstrapper.Setup();
+
             if (args.Contains("-report"))
             {
                 MyErrorReporter.Report(args[1], args[2], "SE", MyErrorReporter.APP_ERROR_MESSAGE);
@@ -215,7 +218,9 @@ namespace SpaceEngineers
                     {
                         if (!(steamService.IsActive && steamService.OwnsGame))
                         {
-                            MessageBoxWrapper("Steam is not running!", "Game might be unstable when run without Steam!");
+#if !DEBUG
+                          MessageBoxWrapper("Steam is not running!", "Game might be unstable when run without Steam!");
+#endif
                         }
                     }
                 }

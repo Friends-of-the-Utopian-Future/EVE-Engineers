@@ -121,6 +121,10 @@
     <Reference Include="mscorlib">
       <Private>False</Private>
     </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SharpDX">
       <HintPath>..\..\3rd\SharpDX\SharpDX.dll</HintPath>
     </Reference>
@@ -146,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Content\Data\Scripts\StatLogic\SpaceStatEffect.cs" />
+    <Compile Include="DependencyInjection\NinjectBootstrapper.cs" />
     <Compile Include="MyProgram.cs" />
     <Compile Include="GUI\DebugScreens\MyGuiScreenDebugShipLargeProperties.cs" />
     <Compile Include="GUI\DebugScreens\MyGuiScreenDebugShipSmallProperties.cs" />
@@ -271,6 +276,7 @@
     <Content Include="PrepareScriptMod.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="packages.config" />
     <None Include="steam_appid.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
